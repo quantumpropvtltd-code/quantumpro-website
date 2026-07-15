@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: "Poppins", "Segoe UI", Arial, sans-serif;
-  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  background: linear-gradient(135deg, #07101d 0%, #081423 45%, #07101d 100%);
   color: var(--text);
   line-height: 1.6;
   overflow-x: hidden;
@@ -35,9 +35,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.12), transparent 24%),
-    radial-gradient(circle at 80% 0%, rgba(6, 182, 212, 0.1), transparent 22%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.85), rgba(238, 244, 255, 0.7));
+    radial-gradient(circle at 16% 18%, rgba(37, 99, 235, 0.24), transparent 28%),
+    radial-gradient(circle at 84% 6%, rgba(6, 182, 212, 0.16), transparent 24%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.02), transparent 70%);
   pointer-events: none;
   z-index: -2;
 }
@@ -133,12 +133,12 @@ textarea {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.25rem;
-  border: 1px solid rgba(255, 255, 255, 0.24);
+  border: 1px solid rgba(96, 165, 250, 0.24);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(15, 25, 45, 0.55);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.12);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.24);
 }
 
 .brand {
@@ -153,6 +153,12 @@ textarea {
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.14);
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+}
+
+.brand span {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .brand::before {
@@ -201,6 +207,7 @@ textarea {
   position: relative;
   padding: 0.5rem 0.7rem;
   border-radius: 999px;
+  color: #f8fbff;
   transition: color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 }
 
@@ -227,8 +234,8 @@ textarea {
 .nav-links a:hover,
 .nav-links a:focus-visible,
 .nav-links a.active {
-  color: white;
-  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.09);
   transform: translateY(-1px);
 }
 
@@ -263,12 +270,12 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.18), transparent 28%),
-    linear-gradient(120deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0.06));
-  opacity: 0.58;
+    radial-gradient(circle at 20% 18%, rgba(37, 99, 235, 0.18), transparent 26%),
+    linear-gradient(120deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  opacity: 0.9;
   z-index: -2;
-  filter: blur(2px);
-  transform: scale(1.05);
+  filter: blur(1px);
+  transform: scale(1.04);
   animation: zoom 24s ease-in-out infinite alternate;
 }
 
@@ -276,7 +283,7 @@ textarea {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(8, 17, 32, 0.72), rgba(8, 17, 32, 0.48));
+  background: linear-gradient(135deg, rgba(8, 17, 32, 0.48), rgba(8, 17, 32, 0.3));
   z-index: -1;
   animation: drift 18s ease-in-out infinite alternate;
 }
@@ -314,6 +321,7 @@ textarea {
   margin-bottom: 1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #ffffff;
 }
 
 .gradient-text {
@@ -422,9 +430,9 @@ textarea {
   position: relative;
   padding: 1.3rem;
   border-radius: 1.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.16);
-  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.24);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   display: grid;
@@ -446,14 +454,15 @@ textarea {
   gap: 0.9rem;
   padding: 0.95rem 1rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.11);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .stat-item:hover {
   transform: translateY(-3px);
   border-color: rgba(96, 165, 250, 0.4);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .stat-icon {
@@ -475,12 +484,12 @@ textarea {
 .stat-item strong {
   display: block;
   font-size: 1.45rem;
-  color: white;
+  color: #ffffff;
   margin-bottom: 0.12rem;
 }
 
 .stat-item span {
-  color: var(--muted);
+  color: #ffffff;
   font-size: 0.9rem;
 }
 
@@ -598,6 +607,7 @@ textarea {
 .contact-copy h2 {
   font-size: clamp(1.8rem, 2.8vw, 2.55rem);
   margin-bottom: 0.8rem;
+  color: #111111;
 }
 
 .section-heading p,
@@ -760,7 +770,28 @@ textarea {
   background-position: center;
   border: 1px solid rgba(255, 255, 255, 0.15);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.portfolio-thumb svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0.85rem;
+  animation: portfolioFloat 3.2s ease-in-out infinite;
+}
+
+@keyframes portfolioFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .portfolio-thumb::after {
@@ -774,6 +805,7 @@ textarea {
 
 .portfolio-card:hover .portfolio-thumb {
   transform: scale(1.025);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24), 0 0 32px rgba(34, 211, 238, 0.18);
 }
 
 .portfolio-card:hover .portfolio-thumb::after {
@@ -829,6 +861,18 @@ textarea {
   margin-top: 1rem;
 }
 
+.contact-actions-inline .btn-secondary {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.2);
+}
+
+.contact-actions-inline .btn-secondary:hover,
+.contact-actions-inline .btn-secondary:focus-visible {
+  box-shadow: 0 14px 32px rgba(37, 99, 235, 0.25);
+}
+
 .contact-stack {
   display: grid;
   gap: 1rem;
@@ -842,31 +886,36 @@ textarea {
 .contact-form label {
   display: grid;
   gap: 0.35rem;
-  color: #dce8f8;
+  color: #222222;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid #d9d9d9;
   border-radius: 0.9rem;
   padding: 0.8rem 0.95rem;
-  background: rgba(255, 255, 255, 0.08);
-  color: white;
+  background: #ffffff;
+  color: #111111;
   transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: rgba(6, 182, 212, 0.7);
-  box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.18);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: #2f80ff;
+  box-shadow: 0 0 0 3px rgba(47, 128, 255, 0.16);
+  background: #ffffff;
 }
 
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
-  color: #9fb1ca;
+  color: #777777;
+}
+
+.contact-form input,
+.contact-form textarea {
+  caret-color: #1f7bff;
 }
 
 .map-card {
@@ -1101,27 +1150,17 @@ textarea {
 }
 
 #services.section {
-  background: linear-gradient(180deg, #fcfdff 0%, #f4f8ff 100%);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 #about.section {
-  background: linear-gradient(180deg, #f9fcff 0%, #f4f7fb 100%);
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
   padding: 4.6rem 2rem;
 }
 
-#about.section::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(115deg, rgba(255,255,255,0.95), rgba(255,255,255,0.2)), url("assets/images/office-bg.jpg") center/cover no-repeat;
-  opacity: 0.22;
-  border-radius: inherit;
-  pointer-events: none;
-}
-
 #why-us.section {
-  background: linear-gradient(180deg, #f7faff 0%, #eef4ff 100%);
+  background: linear-gradient(180deg, #f7faff 0%, #edf4ff 100%);
 }
 
 #contact.section,
@@ -1157,7 +1196,7 @@ textarea {
 
 .hero .hero-copy h1,
 .hero .eyebrow {
-  text-shadow: 0 8px 30px rgba(2, 6, 23, 0.2);
+  text-shadow: 0 8px 28px rgba(2, 6, 23, 0.22);
 }
 
 @media (max-width: 980px) {
